@@ -27,3 +27,23 @@ __Explica brevemente la estructura y ficheros que ha generado Angular CLI__
     * Directorio `app`: este contiene el código principal de la aplicación, tras su compilación.
         * Ficheros `app.component.*`: contiene el componente raíz de la aplicación, que renderiza la vista inicial de la misma.
         * Fichero `app.module.ts`: define el módulo raíz de la aplicación, responsable del arranque de la misma, así como de importar el resto de módulos y componentes.
+
+__Explica cada uno de los siguientes decoradores generados por Angular CLI, detallando cada una de las propiedades que se definen en:__
+
+* app.module.ts - @NgModule (declarations, imports, 
+providers, bootstrap):
+    * La propiedad `declarations` define un `array` de componentes, directivas o _pipes_ que se definen en el módulo. En este caso, se declara `appComponent` como componente del módulo.   
+    * La propiedad `imports` se define como un `array` de otros módulos en los cuales este módulo depende. En este caso, se importa BrowserModule, que realiza servicios específicos de los navegadores.
+    * La propiedad `providers` se trata de un `array` de servicios que están disponibles para inyectar en componentes u otros servicios. 
+    * La propiedad `bootstrap` define el componente que se usa como componente raí de la aplicación. En este caso, se usa `AppComponent`, lo cual quiere decir que será el primer componente renderizado cuando al aplicación se cargue.
+* app.component.ts - @Component (selector, templateUrl,
+styleUrls).:
+    * `selector` especifica el nombre del elemento HTML que representa el componente. En este caso, el selector se especifica como `app-root`, lo cual quiere decir que se puede utilizar en el código como el elemento de este nombre.
+    * `templateUrl` indica la URL de la plantilla en la que se define el código HTML del componente. En este caso es `app.component.html`.
+    * `styleUrls` define la hoja de estilos que se aplicará al componente. En este caso se trata de `app.component.scss` (porque he elegido SCSS en lugar de CSS como hoja de estilos predeterminada en la creación del proyecto de Angular).
+
+__¿Es posible poder inyectar el template y los estilos en línea de un componente sin necesidad de especificarlos en templateUrl, styleUrls? ¿Es recomendable hacer esto?__
+
+Sí, podŕia hacerse desde el archivo `app.component.ts`. En lugar de especificando una URL, se especificaría el código HTML como argumento en forma de string, y de forma similar para el código CSS.
+
+Es difícil establecer si es algo recomendable o no. Para componentes de pequeño tamaño que no impliquen mucho código HTML o CSS, podría tener sentido hacer algo así. Sin embargo, creo que es más lógico utilizar los archivos correspondientes en componentes que son de mayor envergadura. Usar una plantilla externa y de estilos se considera buena práctica, ya que así estaríamos separando la lógica del resto de elementos. Además, de esta forma podŕian reutilizarse los archivos para otros componentes. 
