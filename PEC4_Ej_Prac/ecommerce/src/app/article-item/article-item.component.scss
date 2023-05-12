@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+div.item {
+    padding-block: 2em;
+    font-family: 'Open Sans', sans-serif;
+    width: min(90%, 400px);
+    margin: 0 auto;
+    border: 1px solid rgb(109, 177, 172);
+    border-radius: 10px;
+
+    button {
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: 1px solid rgb(109, 177, 172);
+        border-radius: 4px;
+        background-color: rgb(123, 197, 192);
+    }
+
+    .price-tag {
+        font-weight: bold;
+    }
+
+}
+
+div.on-sale {
+    background-color: rgb(155, 221, 217);
+}
