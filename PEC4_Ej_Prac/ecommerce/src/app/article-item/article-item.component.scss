@@ -18,12 +18,17 @@ div.item {
         background-color: rgb(123, 197, 192);
     }
 
-    .price-tag {
+    button:disabled {
+        opacity: 50%;
+    }
+
+    .price-tag,
+    .quantity {
         font-weight: bold;
     }
 
 }
 
-div.on-sale {
-    background-color: rgb(155, 221, 217);
+.on-sale {
+    background-color: rgb(195, 241, 228);
 }
