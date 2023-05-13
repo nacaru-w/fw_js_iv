@@ -7,6 +7,19 @@ div.item {
     margin: 0 auto;
     border: 1px solid rgb(109, 177, 172);
     border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+
+    .image-container {
+        width: 30%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 
     button {
         font-weight: bold;
