@@ -33,6 +33,6 @@ Esto puede tener muchos ejemplos de aplicación: una lista de productos que se p
 
 __¿Es posible ejecutar dos directivas estructurales simultáneamente? Explica la razón tanto si es si posible como si no lo es.__
 
-Angular no permite ejecutar dos directivas estructurales sobre el mismo elemento. Si se realiza, saltará un error: `Can't have multiple template bindings on one element`. 
+Angular no permite ejecutar dos directivas estructurales sobre el mismo elemento. Si se realiza, se arrojará un error: `Can't have multiple template bindings on one element`. 
 
 Esto ocurre porque las directivas manipulan la estructura del DOM. Cuando se usan múltples directivas estructurales en el mismo elemento, puede causar conflictos y ambiguedad sobre cómo el DOM debería estructurarse. Angular, por tanto, no sabe cuál debería priorizarse ante la otra. La solución a estos casos es usar _nesting_.
