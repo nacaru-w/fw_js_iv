@@ -10,6 +10,7 @@ import { Article } from '../model/article';
 export class ArticleItemComponent {
 
   public article: Article;
+  public articleClasses: any;
 
   constructor() { }
 
@@ -19,8 +20,11 @@ export class ArticleItemComponent {
       name: 'Consola',
       imageUrl: 'assets/images/ClassicPortable.svg',
       price: 80,
-      isOnSale: true,
+      isOnSale: false,
       quantityInCart: 0
+    }
+    this.articleClasses = {
+      "not-on-sale": !this.article.isOnSale
     }
 
   }
