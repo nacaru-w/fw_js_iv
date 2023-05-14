@@ -3,3 +3,13 @@
 * {
     font-family: 'Open Sans', sans-serif;
 }
+
+app-article-list {
+    display: flex;
+    flex-direction: row;
+    width: min(90%, 1300px);
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
