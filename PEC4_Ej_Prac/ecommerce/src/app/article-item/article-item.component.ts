@@ -23,18 +23,18 @@ export class ArticleItemComponent implements OnInit {
     }
   }
 
-  addtoCart() {
+  addtoCart(): void {
     this.quantityChange.emit({ article: this.article, changeInQuantity: 1 });
   }
 
-  removeFromCart() {
+  removeFromCart(): void {
     if (this.article.quantityInCart > 0) {
       this.quantityChange.emit({ article: this.article, changeInQuantity: -1 });
 
     }
   }
 
-  disableButton() {
+  disableButton(): boolean {
     return !Boolean(this.article.quantityInCart)
   }
 
