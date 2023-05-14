@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Article } from '../model/article';
 
 @Component({
@@ -7,27 +7,20 @@ import { Article } from '../model/article';
   styleUrls: ['./article-item.component.scss']
 })
 
-export class ArticleItemComponent {
+export class ArticleItemComponent implements OnInit {
 
-  public article: Article;
+  @Input() public article: Article;
   public articleClasses: any;
 
   constructor() { }
 
-  ngOnInit() {
-
-    this.article = {
-      name: 'Consola',
-      imageUrl: 'assets/images/ClassicPortable.svg',
-      price: 80,
-      isOnSale: false,
-      quantityInCart: 0
-    }
+  ngOnInit(): void {
     this.articleClasses = {
       "not-on-sale": !this.article.isOnSale
     }
-
   }
+
+
 
   addtoCart() {
     this.article.quantityInCart += 1;
